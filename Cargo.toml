@@ -1,0 +1,21 @@
+[package]
+name = "env-map"
+version = "0.1.0"
+authors = ["Rodrigo Bronzelle <bronzelle@gmail.com>"]
+edition = "2021"
+description = "EnvMap: A Rust crate for easily mapping environment variables to structs with support for `.env` files and global accessibility."
+license = "MPL-2.0"
+repository = "https://github.com/bronzelle/env-map"
+keywords = ["configuration", "env", "settings", "macro", "global-config"]
+categories = ["config", "development-tools::build-utils"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+dotenvy = "0.15.7"
+envy = "0.4.2"
+proc-macro2 = "1.0.74"
+quote = "1.0.35"
+serde = { version = "1.0.164", features = ["derive"] }
+syn = "2.0.46"
